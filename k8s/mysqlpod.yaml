@@ -94,11 +94,11 @@ data:
       mkdir ~/jee
       mkdir ~/jee/db-install
       cd ~/jee/db-install
-      curl -L -o create-planespotter-db.sh https://github.com/yfauser/planespotter/raw/master/db-install/create-planespotter-db.sh
-      curl -L -o create-planespotter-db.sql https://github.com/yfauser/planespotter/raw/master/db-install/create-planespotter-db.sql
+      curl -L -o create-sample-db.sh https://github.com/riazvm/containerizetomcatapp/tree/master/dbinstall/create-sample-db.sh
+      curl -L -o create-sample-db.sql https://github.com/riazvm/containerizetomcatapp/tree/master/dbinstall/create-sample-db.sql
       echo "creating a new planespotter db"
-      chmod +x create-planespotter-db.sh
-      ./create-planespotter-db.sh
+      chmod +x create-sample-db.sh
+      ./create-sample-db.sh
     fi
 ---
 apiVersion: v1

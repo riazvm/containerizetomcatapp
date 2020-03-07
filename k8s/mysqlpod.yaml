@@ -43,7 +43,7 @@ spec:
           mountPath: /var/lib/mysql
         - name: mysql-config
           mountPath: /bin/sampledb-install.sh
-          subPath: jee-install.sh
+          subPath: sampledb-install.sh
         - name: mysql-start
           mountPath: /bin/mysql-start.sh
           subPath: mysql-start.sh
@@ -78,7 +78,7 @@ data:
       echo "status: $ALIVE"
     done
     echo "MYSQL is alive, checking database..."
-    DBEXIST=`mysql --user=root --password=$MYSQL_ROOT_PASSWORD -e 'show databases;' | grep jee`
+    DBEXIST=`mysql --user=root --password=$MYSQL_ROOT_PASSWORD -e 'show databases;' | grep sampledb`
     if ! [ -z "$DBEXIST" ]
     then
       echo "jee db already installed."

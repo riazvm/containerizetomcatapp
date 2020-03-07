@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sampleapp
+  name: samplewebapp
+  namespace: jee
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sampleapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sampleapp
+    spec:
+      containers:
+      - image: pksharbor.acelab.local/library/samplewebapp:v1
+        name: mywebapp
+        resources: {}
+status: {}
